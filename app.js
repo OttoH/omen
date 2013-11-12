@@ -78,6 +78,12 @@ app.get('/', function (req, res) {
     res.render('index', data);
     */
 });
+
+app.get('/u', function (req, res) {
+    var d = {};
+    res.render('index_', d);
+
+});
 //app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
