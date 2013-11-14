@@ -77,9 +77,7 @@ p {
 .main .content .photo {
   margin: 0;
   /* To layout horizontal LIs */
-
   /* For IE 6/7 - needs inline block hack (and the background color mentioned above) */
-
 }
 .main .content .photo #scrollview-content {
   white-space: nowrap;
