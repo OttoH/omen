@@ -1,15 +1,17 @@
 YUI().use('scrollview', 'scrollview-paginator', function(Y) {
-	
-	var scrollView = new Y.ScrollView({
-        id: "scrollview",
-        srcNode : '#scrollview-content',
-        width : 480,
-        flick: {
-            minDistance:10,
-            minVelocity:0.6,
-            axis: "x"
-        }
-    });
+    var e_width = Y.one('.photo').get('offsetWidth'),
+	    scrollView = new Y.ScrollView({
+            id: "scrollview",
+            srcNode : '#scrollview-content',
+            width : e_width,
+            flick: {
+                minDistance:10,
+                minVelocity:0.8,
+                axis: "x"
+            }
+        });
+
+        console.log(e_width);
 
 	scrollView.plug(Y.Plugin.ScrollViewPaginator, {
         selector: 'li'

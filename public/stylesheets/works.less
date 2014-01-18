@@ -1,0 +1,88 @@
+@import "frame.less";
+
+.works {
+	margin: 10px 0;
+	letter-spacing: -0.036em;
+
+	.work {
+		display: block;
+		height: 123px;
+		padding: 0 0 6px 0;
+		margin: 6px 0 0 0;
+		border-bottom: 1px dotted @c_purple_0;
+
+		a {
+			display: inline-block;
+			height: 120px;
+			float: left;
+		}
+
+		.photo {
+			display: inline-block;
+			width: 120px;
+			height: 120px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			float: left;
+			
+		}
+
+		.photo_canv {
+			display: inline-block;
+			width: 240px;
+			height: 120px;
+			float: left;
+
+		}
+
+		.photo_series {
+			display: inline-block;
+			overflow: hidden;
+
+			.photo_ser {
+				width: 120px;
+				height: 120px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				float: left;
+			}
+		}
+
+		.desc {
+			display: inline-block;
+			height: 120px;
+			margin: 0 6px;
+			color: @c_gray_f3;
+			position: relative;
+			min-width: 140px;
+			background-color: @c_pink_0;
+			padding: 0 6px;
+			top: 0px;
+
+			.largeF {
+				font-size: @font-nb;
+			}
+
+			.middleF {
+				font-size: @font-s;
+			}
+
+			.smallF {
+				font-size: @font-ss;
+			}
+
+			.title {
+				line-height: 28px;
+				letter-spacing: 0.066em;
+				font-size: @font-nbb;
+			}
+
+			.bottom {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+}

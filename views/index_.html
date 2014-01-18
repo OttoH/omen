@@ -1,60 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>兆 / OMEN</title>
-
-    <meta name="keywords" content="omen project, design, twdw, 2013, industrial design, 兆" />
-    <meta name="description" content="兆 omen project">
-    <meta name="author" content="justangon">
-    <script src="/javascripts/build/yui/yui-min.js"></script>
-    <!--script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script-->
-    <script src="/javascripts/omen.js"></script>
-
-    <!-- Here's Golden Gridlet, the grid overlay script. -->
-    <script src="/javascripts/GGS.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    {{> meta_head}}
     <link href="/stylesheets/main.css" rel="stylesheet">
+    
 </head>
 <body>
     <div class="pure-g-r main">
-        <div class="pure-u-1 head">
-            <a href="#"><div class="title">-:- omen project -:-</div></a>
-        </div>
-        <div class="pure-u-1 menu">
-            <ul class="pure-g-r">
-                <li class="pure-u-1-8"><a href="#">Artists</a></li>
-                <li class="pure-u-1-8"><a href="#">Works</a></li>
-                <li class="pure-u-1-8"><a href="#">About</a></li>
-                <li class="pure-u-1-8"><a href="#">Exhib.</a></li>
-                <li class="pure-u-1-8"><a href="#">Contact</a></li>
-            </ul>
-        </div>
+        {{> head}}
+
         <div class="pure-u-5-8 content">
-            <div class="photo">
-                <div id="scrollview-content" class="yui3-scrollview-loading">
-                    <ul>
-                        <li><div class="ph" style="background-image: url('data/work/goodtime/goodtime_002.jpg')"></div></li>
-                        <li><div class="ph" style="background-image: url('data/work/limitless/limitless_011.jpg')"></div></li>
-                        <li><div class="ph" style="background-image: url('data/work/limitless/limitless_016.jpg')"></div></li>
-                        <li><div class="ph" style="background-image: url('data/work/spiritofhouse/spiritofhouse_002.jpg')"></div></li>
-                    </ul>
-                </div> 
-                <div id="scrollview-pager">
-                    <button id="scrollview-prev"><</button>
-                    <button id="scrollview-next">></button>
-                </div>
-
-                <div class="desc">
-                    <p>極境。Limitless</p>
-                    <p>Design around the life!設計，是為了將一個簡單的念頭化為實際，這是我們的理念，是我們的心情，也是我們對世界的期許與祝福。</p>
-                </div>
-            </div>
-            
-            
+            {{> scrollpic_h}}
         </div>
-    </div>
 
+        {{> footer}} 
+    </div>
 </body>
+<script type="text/javascript">
+    YUI().use('scrollview', function(Y) {
+        Y.one('.photo').addClass('index');
+    });
+</script>
+<script src="/javascripts/omen.js"></script>
 </html>

@@ -5,7 +5,6 @@ body {
     background: url("../data/bg_f.jpg");
     background-repeat: repeat-x repeat-y;
     */
-
 }
 a {
   color: #343339;
@@ -62,7 +61,6 @@ p {
   line-height: 28px;
   background: #F3F7FF;
   /*border-bottom: dotted 1px #d5d5d5;*/
-
   letter-spacing: .16em;
 }
 .main .content .ind_wrap p a {
@@ -84,7 +82,6 @@ p {
   line-height: 36px;
   background: #F3F7FF;
   /*border-bottom: dotted 1px #d5d5d5;*/
-
   letter-spacing: .26em;
 }
 .main .content .desc_wrap .title {
@@ -97,10 +94,8 @@ p {
   letter-spacing: .28em;
   font-weight: lighter;
   /*font-size: 2.4em;*/
-
   /* margin: 48px 0px*/
   /*text-shadow: 1px 1px 8px #f6f6f6;*/
-
   -webkit-box-shadow: 6px 6px 0px #69686B;
   -moz-box-shadow: 6px 6px 0px #69686B;
   -o-box-shadow: 6px 6px 0px #69686B;
@@ -152,7 +147,6 @@ p {
                 -ms-box-shadow: 6px 0px 0px #69686B;
                 box-shadow: 6px 0px 0px #69686B;
                 */
-
 }
 .main .content .desc_wrap .cList ul {
   margin: 0px;
@@ -189,11 +183,9 @@ p {
   opacity: 0;
   font-size: 88%;
   /*min-height: 760px;*/
-
 }
 .main .content_ind #photoPanel {
   /*background: url('http://farm6.staticflickr.com/5533/9665117297_e3cabdf78a_c.jpg');*/
-
   background: url('../data/loading.png');
   background: #fff;
   white-space: normal;
@@ -220,7 +212,6 @@ p {
   width: 100%;
   height: 45px;
   /*background-color: #69686B;*/
-
   border-bottom: dotted 2px #69686B;
   color: #69686B;
   letter-spacing: .12em;

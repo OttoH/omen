@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> meta_head}}
+    <link href="/stylesheets/members.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pure-g-r main">
+        {{> head}}
+        <div class="pure-u-5-8 member">
+            {{#each members}}
+                <div class="man">
+                    <div class="photo" style="background-image: url(../data/head/{{id}}.jpg)"></div>
+                    <div class="desc">
+                        <p class="largeF">{{{name}}}</p>
+                        <p class="middleF">{{{nick}}}</p>
+                        <p class="smallF">{{{email}}}</p>
+                        <div class="work">
+                            {{#each works}}
+                            <a href="/work/{{this.eng}}"><span>{{this.ch}}</span></a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        {{> footer}}   
+    </div>
+</body>
+</html>

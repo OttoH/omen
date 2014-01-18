@@ -1,0 +1,68 @@
+@import "frame.less";
+
+.member {
+	margin: 10px 0;
+	letter-spacing: -0.036em;
+
+	@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+		.man {
+			display: block;
+			height: 260px;
+			padding: 0 0 6px 0;
+			margin: 6px 0 0 0;
+			border-bottom: 1px dotted @c_purple_0;
+		}
+	}
+
+	.man {
+		display: block;
+		height: 123px;
+		padding: 0 0 6px 0;
+		margin: 6px 0 0 0;
+		border-bottom: 1px dotted @c_purple_0;
+
+		.photo {
+			display: inline-block;
+			width: 120px;
+			height: 120px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			float: left;
+			border: 1px solid @c_gray_d5;
+
+		}
+
+		.desc {
+			display: inline-block;
+			height: 120px;
+			float: left;
+			margin: 0 6px;
+			color: @c_gray_nor;
+
+			.largeF {
+				font-size: @font-nb;
+			}
+
+			.middleF {
+				font-size: @font-ss;
+			}
+
+			.smallF {
+				font-size: @font-ss;
+			}
+
+			div.work {
+				margin: 6px 0 0 0;
+				a span {
+					display: inline-block;
+					line-height: 18px;
+					border: 1px solid @c_purple_0;
+					padding: 0px 6px;
+					margin: 0 2px 0 0px;
+					font-size: @font-ss;
+				}
+			}
+		}
+	}
+}

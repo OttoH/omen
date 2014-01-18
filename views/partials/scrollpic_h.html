@@ -1,0 +1,14 @@
+
+<div class="photo">
+    <div id="scrollview-pager">
+        <button id="scrollview-prev"><<</button>
+        <button id="scrollview-next">>></button>
+    </div>
+    <div id="scrollview-content" class="yui3-scrollview-loading">
+        <ul>
+            {{#each cover}}
+            <li><div class="ph" style="background-image: url('{{this}}')"></div></li>
+            {{/each}}
+        </ul>
+    </div> 
+</div>  

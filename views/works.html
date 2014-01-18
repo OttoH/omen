@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> meta_head}}
+    <link href="/stylesheets/works.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pure-g-r main">
+        {{> head}}
+        <div class="pure-u-5-8 works">
+            {{#each allworks}}
+                <div class="work">
+                    <a href="/work/{{dir}}" class="first_click">
+                        <div class="photo" style="background-image: url(../data/work/{{dir}}/{{dir}}_m/{{s_photo}})"></div>
+                        <!--div class="photo_series">
+                            <div class="photo_canv"></div>
+                        </div-->
+                        <div class="desc">
+                            {{#each works}}
+                                <p class="title">{{this.ch}}</p>
+                                <p class="smallF">{{this.eng}}</p>
+                            {{/each}}
+                            <div class="bottom">
+                                <p class="middleF">{{{name}}}</p>
+                                <p class="smallF">{{{nick}}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="pure-u-1 footer">
+            <div class="descSection">
+                <p>2013 copyright of <a href="u">-omen-</a> project</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

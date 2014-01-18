@@ -1,0 +1,165 @@
+html,
+body {
+  font-family: "Helvetica neue", Helvetica, Lucida Grande, Arial;
+  color: rgba(123, 114, 153, 0.82);
+  margin: 0;
+  padding: 0;
+  /*
+    background-image: url(data:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABpCAMAAAAOXP0IAAAAElBMVEXv7+/8/Pzm5uby8vL4+Pjr6+s8Y2RHAAAAiUlEQVR42u3ZMQrAMAgFUJPo/a/csQRKoRSEljc4OJhAHp8MRsQYPRVzrXlWzq3PtfW1tr6ezMZ4c9aT2b6b+l6PEydOnO6dsio7ipM8ceLE6ftOfb8GJ3nixInTH5wqszqKkzxx4sTp+059vwYneeLEiZO9hr2GPHHixMlew15Dnjhx4sTpavYAfp9zffLSX1UAAAAASUVORK5CYII=);
+    background-repeat: repeat;
+    */
+}
+a {
+  color: #7b7299;
+}
+a:link {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+  background: #f3f7ff;
+}
+a:hover {
+  text-decoration: none;
+  background: #f3f7ff;
+  text-shadow: -7px -5px 20px rgba(123, 114, 153, 0.42);
+}
+p {
+  margin: 0px;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: inline-block;
+}
+.main {
+  margin: 0px 5.55% 0px;
+  background-color: #ffffff;
+  /*
+    background-image: url(data:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABpCAMAAAAOXP0IAAAAElBMVEXv7+/8/Pzm5uby8vL4+Pjr6+s8Y2RHAAAAiUlEQVR42u3ZMQrAMAgFUJPo/a/csQRKoRSEljc4OJhAHp8MRsQYPRVzrXlWzq3PtfW1tr6ezMZ4c9aT2b6b+l6PEydOnO6dsio7ipM8ceLE6ftOfb8GJ3nixInTH5wqszqKkzxx4sTp+059vwYneeLEiZO9hr2GPHHixMlew15Dnjhx4sTpavYAfp9zffLSX1UAAAAASUVORK5CYII=);
+    background-repeat: repeat;
+    */
+}
+.main .headMenu .head {
+  display: block;
+  height: 55px;
+  margin-top: 12px;
+}
+.main .headMenu .head .title {
+  font-family: "Helvetica neue", Helvetica, Lucida Grande, Arial;
+  font-size: 360%;
+  line-height: 55px;
+  color: #ffffff;
+  text-shadow: 0px 0px 0px #c5bcb5, 1px 2px 0px #a6a0aa, 2px 3px 0px #88849b, 3px 4px 0px #64688e, 4px 5px 0px #394f81, 5px 6px 0px #003676;
+}
+.main .headMenu .head .title:hover {
+  text-shadow: 0px 6px 6px rgba(123, 114, 153, 0.62);
+}
+.main .headMenu .head .title:active {
+  text-shadow: 168px 6px 6px rgba(123, 114, 153, 0.62);
+}
+.main .headMenu .menu ul {
+  margin: .3em;
+  padding: 0px;
+}
+.main .headMenu .menu ul li {
+  line-height: 30px;
+}
+.main .headMenu .menu ul li a {
+  color: rgba(123, 114, 153, 0.82);
+}
+.main .headMenu .menu ul li a:link {
+  text-decoration: none;
+}
+.main .headMenu .menu ul li a:active {
+  text-decoration: none;
+  background: #f3f7ff;
+}
+.main .headMenu .menu ul li a:hover {
+  text-decoration: line-through;
+  text-shadow: 66px 2px 2px rgba(123, 114, 153, 0.82);
+}
+.main .footer {
+  /*box-shadow: 0px -2px 6px rgba(123, 114, 153, 0.22);*/
+  border-top: 1px solid rgba(123, 114, 153, 0.22);
+  display: block;
+  line-height: 24px;
+  height: 24px;
+  margin: 24px 0 0;
+}
+.main .footer .descSection {
+  font-size: 80%;
+}
+.works {
+  margin: 10px 0;
+  letter-spacing: -0.036em;
+}
+.works .work {
+  display: block;
+  height: 123px;
+  padding: 0 0 6px 0;
+  margin: 6px 0 0 0;
+  border-bottom: 1px dotted #c5bcb5;
+}
+.works .work a {
+  display: inline-block;
+  height: 120px;
+  float: left;
+}
+.works .work .photo {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+}
+.works .work .photo_canv {
+  display: inline-block;
+  width: 240px;
+  height: 120px;
+  float: left;
+}
+.works .work .photo_series {
+  display: inline-block;
+  overflow: hidden;
+}
+.works .work .photo_series .photo_ser {
+  width: 120px;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+}
+.works .work .desc {
+  display: inline-block;
+  height: 120px;
+  margin: 0 6px;
+  color: #f3f7ff;
+  position: relative;
+  min-width: 140px;
+  background-color: #f47f88;
+  padding: 0 6px;
+  top: 0px;
+}
+.works .work .desc .largeF {
+  font-size: 120%;
+}
+.works .work .desc .middleF {
+  font-size: 88%;
+}
+.works .work .desc .smallF {
+  font-size: 80%;
+}
+.works .work .desc .title {
+  line-height: 28px;
+  letter-spacing: 0.066em;
+  font-size: 160%;
+}
+.works .work .desc .bottom {
+  position: absolute;
+  bottom: 0;
+}
