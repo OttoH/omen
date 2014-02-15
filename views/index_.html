@@ -16,10 +16,21 @@
         {{> footer}} 
     </div>
 </body>
-<script type="text/javascript">
-    YUI().use('scrollview', function(Y) {
-        Y.one('.photo').addClass('index');
-    });
-</script>
+
+<style>
+/* handle javascript ON case */
+html.yui3-js-enabled .photo{display:none}
+html.yui3-js-enabled .photo.on{display:block;position:relative}
+
+html.yui3-js-enabled {
+    height:100%;
+}
+html.yui3-js-enabled body {
+    background:#fff url(/data/ajax-loader.gif) 50% 50% no-repeat;
+    height:100%;
+    width:100%;
+}
+</style>
+
 <script src="/javascripts/omen.js"></script>
 </html>

@@ -57,7 +57,7 @@ p {
   text-shadow: 0px 6px 6px rgba(123, 114, 153, 0.62);
 }
 .main .headMenu .head .title:active {
-  text-shadow: 168px 6px 6px rgba(123, 114, 153, 0.62);
+  text-shadow: 0px 6px 6px rgba(123, 114, 153, 0.62);
 }
 .main .headMenu .menu ul {
   margin: .3em;
@@ -78,7 +78,7 @@ p {
 }
 .main .headMenu .menu ul li a:hover {
   text-decoration: line-through;
-  text-shadow: 66px 2px 2px rgba(123, 114, 153, 0.82);
+  text-shadow: 68px 2px 2px rgba(123, 114, 153, 0.82);
 }
 .main .footer {
   /*box-shadow: 0px -2px 6px rgba(123, 114, 153, 0.22);*/
@@ -86,7 +86,7 @@ p {
   display: block;
   line-height: 24px;
   height: 24px;
-  margin: 24px 0 0;
+  /*margin: 24px 0 0;*/
 }
 .main .footer .descSection {
   font-size: 80%;
@@ -95,21 +95,12 @@ p {
   margin: 10px 0;
   letter-spacing: -0.036em;
 }
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .member .man {
-    display: block;
-    height: 260px;
-    padding: 0 0 6px 0;
-    margin: 6px 0 0 0;
-    border-bottom: 1px dotted #c5bcb5;
-  }
-}
 .member .man {
   display: block;
   height: 123px;
-  padding: 0 0 6px 0;
-  margin: 6px 0 0 0;
-  border-bottom: 1px dotted #c5bcb5;
+  padding: 6px 0 0 0;
+  margin: 0 0 0 0;
+  /*border-bottom: 1px dotted @c_purple_0;*/
 }
 .member .man .photo {
   display: inline-block;
@@ -147,4 +138,11 @@ p {
   padding: 0px 6px;
   margin: 0 2px 0 0px;
   font-size: 80%;
+}
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .member .man {
+    display: block;
+    height: 230px;
+    border-top: 1px dotted #c5bcb5;
+  }
 }

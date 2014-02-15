@@ -33,7 +33,7 @@ exports.s_work = function(req, res){
 		getPhoto: function (callback) {
 			fs.readdir("./public/data/work/"+term, function(err, files) {
 				var re_files = [];
-				for (I=0, L=(files.length > 6) ? 6 : files.length; I<L; I++) {
+				for (I=0, L=(files.length > 12) ? 12 : files.length; I<L; I++) {
 					if (files[I] !== term+"_m") {
 						re_files[I] = "../data/work/"+term+"/"+files[I];	
 					}

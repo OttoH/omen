@@ -1,4 +1,6 @@
 YUI().use('scrollview', 'scrollview-paginator', function(Y) {
+    Y.one('.photo').addClass('on');    
+
     var e_width = Y.one('.photo').get('offsetWidth'),
 	    scrollView = new Y.ScrollView({
             id: "scrollview",
@@ -11,13 +13,14 @@ YUI().use('scrollview', 'scrollview-paginator', function(Y) {
             }
         });
 
-        console.log(e_width);
+        //console.log(e_width);
 
 	scrollView.plug(Y.Plugin.ScrollViewPaginator, {
         selector: 'li'
  	});
 
     scrollView.render();
+
 /*
     var content = scrollView.get("contentBox");
 

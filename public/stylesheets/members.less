@@ -4,22 +4,12 @@
 	margin: 10px 0;
 	letter-spacing: -0.036em;
 
-	@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
-		.man {
-			display: block;
-			height: 260px;
-			padding: 0 0 6px 0;
-			margin: 6px 0 0 0;
-			border-bottom: 1px dotted @c_purple_0;
-		}
-	}
-
 	.man {
 		display: block;
 		height: 123px;
-		padding: 0 0 6px 0;
-		margin: 6px 0 0 0;
-		border-bottom: 1px dotted @c_purple_0;
+		padding: 6px 0 0 0;
+		margin: 0 0 0 0;
+		/*border-bottom: 1px dotted @c_purple_0;*/
 
 		.photo {
 			display: inline-block;
@@ -63,6 +53,14 @@
 					font-size: @font-ss;
 				}
 			}
+		}
+	}
+
+	@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+		.man {
+			display: block;
+			height: 230px;
+			border-top: 1px dotted @c_purple_0;
 		}
 	}
 }
