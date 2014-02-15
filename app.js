@@ -9,9 +9,8 @@ var express = require('express'),
     works = require('./routes/works'),
     http = require('http'),
     path = require('path'),
-    hbs = require('hbs');
-
-var fs = require('fs');
+    hbs = require('hbs'),
+    fs = require('fs');
 
 var app = express();
     commonEngine = require("./commonRes/common");
