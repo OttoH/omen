@@ -29,7 +29,7 @@ a {
 
     &:hover {
         text-decoration:none;
-        background: @c_gray_f3;
+        /*background: @c_gray_f3;*/
         text-shadow: -7px -5px 20px rgba(123, 114, 153, 0.42);
     }
 }
@@ -83,6 +83,9 @@ p{
         }
 
         .menu {
+            .mobMenu {
+                display: none;
+            }
             
             ul{
                 margin: .3em;
@@ -106,9 +109,61 @@ p{
                         &:hover {
                             text-decoration: line-through;
                             text-shadow: 2px 2px 2px rgba(123, 114, 153, 0.82);
+                            background-color: rgba(255, 255, 255, 0);
                         }
                     }
+
+                    &:hover {
+                        text-decoration: line-through;
+                        text-shadow: 2px 2px 2px rgba(123, 114, 153, 0.82);
+                        background-color: rgba(255, 255, 255, 0);
+                    }
                 }
+            }
+        }
+
+        @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+            .menu {
+                position: relative;
+                top: 12px;
+                z-index: 26;
+                left: -6px;
+
+                ul {
+                    position: relative;
+                    left: -100%;
+                    background-color: rgba(255, 255, 255, 0.82);
+                    margin: 0px;
+
+
+                    &.on {
+                        animation:menuMove 1s forwards;
+                        -webkit-animation:menuMove 1s forwards; /* Safari and Chrome */
+                    }
+                }
+                
+                a {
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                    &:active {
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+
+                }
+
+                .mobMenu {
+                    display: inline-block;
+                    width: 26px;
+                    height:26px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    padding: 2px;
+                    line-height: 28px;
+                    font-size: 16px;
+                    border: 1px solid rgba(123, 114, 153, 0.22); 
+                }
+
             }
         }
     }

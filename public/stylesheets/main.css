@@ -1,5 +1,21 @@
 @import "fontello.css";
 @import "animation.css";
+@keyframes menuMove {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 6px;
+  }
+}
+@-webkit-keyframes menuMove /* Safari and Chrome */ {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 6px;
+  }
+}
 html,
 body {
   font-family: "Helvetica neue", Helvetica, Lucida Grande, Arial;
@@ -23,7 +39,7 @@ a:active {
 }
 a:hover {
   text-decoration: none;
-  background: #f3f7ff;
+  /*background: @c_gray_f3;*/
   text-shadow: -7px -5px 20px rgba(123, 114, 153, 0.42);
 }
 p {
@@ -61,6 +77,9 @@ p {
 .main .headMenu .head .title:active {
   text-shadow: 0px 6px 6px rgba(123, 114, 153, 0.62);
 }
+.main .headMenu .menu .mobMenu {
+  display: none;
+}
 .main .headMenu .menu ul {
   margin: .3em;
   padding: 0px;
@@ -81,6 +100,48 @@ p {
 .main .headMenu .menu ul li a:hover {
   text-decoration: line-through;
   text-shadow: 2px 2px 2px rgba(123, 114, 153, 0.82);
+  background-color: rgba(255, 255, 255, 0);
+}
+.main .headMenu .menu ul li:hover {
+  text-decoration: line-through;
+  text-shadow: 2px 2px 2px rgba(123, 114, 153, 0.82);
+  background-color: rgba(255, 255, 255, 0);
+}
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .main .headMenu .menu {
+    position: relative;
+    top: 12px;
+    z-index: 26;
+    left: -6px;
+  }
+  .main .headMenu .menu ul {
+    position: relative;
+    left: -100%;
+    background-color: rgba(255, 255, 255, 0.82);
+    margin: 0px;
+  }
+  .main .headMenu .menu ul.on {
+    animation: menuMove 1s forwards;
+    -webkit-animation: menuMove 1s forwards;
+    /* Safari and Chrome */
+  }
+  .main .headMenu .menu a:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .main .headMenu .menu a:active {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .main .headMenu .menu .mobMenu {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2px;
+    line-height: 28px;
+    font-size: 16px;
+    border: 1px solid rgba(123, 114, 153, 0.22);
+  }
 }
 .main .footer {
   /*box-shadow: 0px -2px 6px rgba(123, 114, 153, 0.22);*/
@@ -154,6 +215,7 @@ p {
   padding: 0px;
   z-index: 20;
   width: 100%;
+  font-size: 23px;
 }
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .main .content .photo #scrollview-pager {
@@ -231,5 +293,12 @@ p {
     margin: 0;
     position: relative;
     width: 280px;
+  }
+}
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .main .content {
+    min-height: 186px;
+    position: relative;
+    top: -166px;
   }
 }

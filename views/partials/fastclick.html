@@ -1,6 +1,23 @@
 <script>
 //window.addEventListener('load', function() {
-    var attachFastClick = require('fastclick');
-	attachFastClick(document.body);
+    //var attachFastClick = require('fastclick');
+	//attachFastClick(document.body);
 //}, false);
+
+YUI().use('node', 'event', function(Y) {
+	var menuClick = Y.one('.menuClick'),
+		menu = Y.one('.menu ul');
+console.log(menuClick);
+	if (menuClick) {
+		Y.delegate("click", function (e) {
+			console.log('cold');
+			e.preventDefault();
+
+			menu.toggleClass('on');
+
+
+		}, ".menu", ".menuClick");
+	}
+
+});
 </script>
