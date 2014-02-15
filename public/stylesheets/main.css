@@ -1,3 +1,5 @@
+@import "fontello.css";
+@import "animation.css";
 html,
 body {
   font-family: "Helvetica neue", Helvetica, Lucida Grande, Arial;
@@ -148,7 +150,7 @@ p {
 .main .content .photo #scrollview-pager {
   position: absolute;
   left: 0px;
-  top: 0;
+  top: 226px;
   padding: 0px;
   z-index: 20;
   width: 100%;
@@ -157,7 +159,7 @@ p {
   .main .content .photo #scrollview-pager {
     position: absolute;
     left: 0px;
-    top: 0;
+    top: 126px;
     padding: 0px;
     z-index: 20;
     width: 100%;
@@ -170,10 +172,11 @@ p {
   border: 0px;
   background-color: #fff;
   width: 36px;
-  height: 24px;
+  height: 36px;
   display: inline-block;
   font-size: 80%;
   line-height: 12px;
+  border-radius: 50%;
 }
 .main .content .photo #scrollview-prev:hover,
 .main .content .photo #scrollview-next:hover {
@@ -192,6 +195,12 @@ p {
 }
 .main .content .photo #scrollview-prev {
   text-align: left;
+}
+.main .content .photo .angle-righticon-:before {
+  padding: 13px;
+}
+.main .content .photo .angle-lefticon-:before {
+  padding: 13px 6px 13px;
 }
 .main .content .photo #scrollview-content img {
   border-width: 1px;

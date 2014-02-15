@@ -16,21 +16,21 @@
         {{> footer}} 
     </div>
 </body>
-
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
 <style>
 /* handle javascript ON case */
-html.yui3-js-enabled .photo{display:none}
-html.yui3-js-enabled .photo.on{display:block;position:relative}
+html.yui3-js-enabled .photo{display:none;}
+html.yui3-js-enabled .photo.on{display:block;position:relative;}
 
 html.yui3-js-enabled {
     height:100%;
 }
-html.yui3-js-enabled body {
+html.yui3-js-enabled .content {
     background:#fff url(/data/ajax-loader.gif) 50% 50% no-repeat;
-    height:100%;
-    width:100%;
+    
 }
 </style>
 
 <script src="/javascripts/omen.js"></script>
+{{> fastclick}}
 </html>
