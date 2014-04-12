@@ -527,7 +527,7 @@ YUI.add('justangon-lib', function (Y) {
                 this.setStyles(base.removeTransition());
 
                 position = this.getXY();
-                console.log(getTouches(ev).x);
+                //console.log(getTouches(ev).x);
                 locals.relativePos = position[0];
 
                 locals.offsetX = getTouches(ev).x - position[0];
@@ -547,11 +547,11 @@ YUI.add('justangon-lib', function (Y) {
                 base.newPosX = getTouches(ev).x - locals.offsetX;
                 base.newPosY = getTouches(ev).y - locals.offsetY;
                 base.newRelativeX = base.newPosX - locals.relativePos;
-                console.log(base.newRelativeX);
+                //console.log(base.newRelativeX);
 
                 if (typeof base.options.startDragging === "function" && locals.dragging !== true && base.newRelativeX !== 0) {
                     locals.dragging = true;
-                    console.log('dragging');
+                    //console.log('dragging');
                     base.options.startDragging.apply(base, [base.Yelem]);
                 }
 
@@ -884,7 +884,7 @@ YUI.add('justangon-lib', function (Y) {
                 direction = "left";
                 base.playDirection = "prev";
             }
-            console.log(direction);
+            //console.log(direction);
             return direction;
         },
 
