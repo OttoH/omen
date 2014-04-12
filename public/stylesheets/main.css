@@ -51,6 +51,9 @@ p {
 .show {
   display: inline-block;
 }
+ul {
+  list-style-type: none;
+}
 .main {
   margin: 0px 5.55% 0px;
   background-color: #ffffff;
@@ -113,17 +116,20 @@ p {
     top: 12px;
     z-index: 26;
     left: -6px;
+    height: 0px;
   }
   .main .headMenu .menu ul {
     position: relative;
     left: -100%;
     background-color: rgba(255, 255, 255, 0.92);
     margin: 0px;
+    opacity: 0;
   }
   .main .headMenu .menu ul.on {
     animation: menuMove 1s forwards;
     -webkit-animation: menuMove 1s forwards;
     /* Safari and Chrome */
+    opacity: 0.9;
   }
   .main .headMenu .menu a:hover {
     background-color: rgba(255, 255, 255, 0);
@@ -161,7 +167,7 @@ p {
 }
 .main .content .photo {
   margin: 0 0 36px 0;
-  position: relative;
+  /*position: relative;*/
   width: 100%;
   /* To layout horizontal LIs */
   /* For IE 6/7 - needs inline block hack (and the background color mentioned above) */
@@ -169,30 +175,27 @@ p {
 .main .content .photo.index {
   width: 360px;
 }
-.main .content .photo #scrollview-content {
-  white-space: nowrap;
-}
 .main .content .photo #scrollview-content ul {
   padding: 0px;
   margin: 0px;
 }
-.main .content .photo #scrollview-content li {
+.main .content .photo #scrollview-content {
   display: inline-block;
-  background-color: #d5d5d5;
 }
-.main .content .photo #scrollview-content li .ph {
+.main .content .photo #scrollview-content .ph {
   display: inline-block;
   width: 360px;
-  height: 480px;
+  height: 360px;
   border-top: 0px dotted #d5d5d5;
   border-bottom: 0px dotted #d5d5d5;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   -webkit-transform: translate3d(0, 0, 0);
+  background-color: #f2f2f6;
 }
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .main .content .photo #scrollview-content li .ph {
+  .main .content .photo #scrollview-content .ph {
     display: inline-block;
     width: 280px;
     height: 280px;
@@ -202,6 +205,7 @@ p {
     background-size: contain;
     background-position: center;
     -webkit-transform: translate3d(0, 0, 0);
+    background-color: #f2f2f6;
   }
 }
 .main .content .photo #scrollview-content li {
@@ -295,10 +299,28 @@ p {
     width: 280px;
   }
 }
+.main .owl-theme .owl-controls {
+  position: absolute;
+  top: 161px;
+  width: 360px;
+  display: inline-block;
+  text-align: left;
+}
+.main .owl-theme .owl-controls .owl-buttons div {
+  background: none repeat scroll 0% 0% #9D8BB1;
+  opacity: 0.4;
+  font-size: 18px;
+}
+.main .owl-theme .owl-controls .owl-next {
+  float: right;
+}
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .main .content {
     min-height: 186px;
     position: relative;
-    top: -166px;
+    /*top: -166px;*/
+  }
+  .main .owl-theme .owl-controls {
+    display: none;
   }
 }

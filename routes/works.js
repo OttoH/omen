@@ -7,13 +7,15 @@ var commonEngine = require("../commonRes/work_common"),
 	fs = require('fs'),
 	async = require('async'),
 	data = {},
-	files = [];
+	files = [],
+	isMobile = require("../commonRes/isMobile");
 
 exports.works = function(req, res){
 	var I, L;
 
 	data.allworks = [];
 	data.allworks = commonEngine.getEntries();
+	data.isMobile = isMobile.isCallerMobile(req);
 
 	//console.log(data);
 	//res.send("respond with a resource");
@@ -28,6 +30,7 @@ exports.s_work = function(req, res){
 
 	data_s.work = [];
 	data_s.work = commonEngine.getEntry(term);
+	data.isMobile = isMobile.isCallerMobile(req);
 
 	async.parallel({
 		getPhoto: function (callback) {

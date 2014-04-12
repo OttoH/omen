@@ -47,6 +47,10 @@ p{
     display: inline-block;
 }
 
+ul {
+   list-style-type: none; 
+}
+
 .main {
     margin: 0px 5.55% 0px; 
     
@@ -128,17 +132,19 @@ p{
                 top: 12px;
                 z-index: 26;
                 left: -6px;
+                height: 0px;
 
                 ul {
                     position: relative;
                     left: -100%;
                     background-color: rgba(255, 255, 255, 0.92);
                     margin: 0px;
-
+                    opacity: 0;
 
                     &.on {
                         animation:menuMove 1s forwards;
                         -webkit-animation:menuMove 1s forwards; /* Safari and Chrome */
+                        opacity: 0.9;
                     }
                 }
                 

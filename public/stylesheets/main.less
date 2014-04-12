@@ -8,7 +8,7 @@
 
     	.photo {
     		margin: 0 0 36px 0;
-    		position: relative;
+    		/*position: relative;*/
     		width: 100%;
 
     		&.index {
@@ -17,28 +17,27 @@
 
     		/* To layout horizontal LIs */
 			#scrollview-content {
-			    white-space:nowrap;
-
+			    
 			    ul {
 			    	padding: 0px;
 			    	margin: 0px;
 			    }
 			}
 
-			#scrollview-content li {
+			#scrollview-content {
 			    display:inline-block;
-			    background-color: #d5d5d5;
 
 			    .ph {
 			    	display: inline-block;
 			    	width: 360px;
-			    	height: 480px;
+			    	height: 360px;
 			    	border-top: 0px dotted #d5d5d5;
 			    	border-bottom: 0px dotted #d5d5d5;
 			    	background-repeat: no-repeat;
 			    	background-size: contain;
 			    	background-position: center;
 			    	-webkit-transform: translate3d(0, 0, 0);
+			    	background-color: #f2f2f6;
 			    }
 
 			    @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
@@ -52,6 +51,7 @@
 				    	background-size: contain;
 				    	background-position: center;
 				    	-webkit-transform: translate3d(0, 0, 0);
+				    	background-color: #f2f2f6;
 				    }
 			    }
 			    
@@ -164,13 +164,35 @@
     	}
     }
 
+    .owl-theme .owl-controls {
+    	position: absolute;
+		top: 161px;
+		width: 360px;
+		display: inline-block;
+		text-align: left;
+
+    	.owl-buttons div {
+    		background: none repeat scroll 0% 0% #9D8BB1;
+    		opacity: 0.4;
+    		font-size: 18px;
+
+    	}
+
+    	.owl-next {
+			float: right;
+		}
+    }
+
     @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
 	    .content {
 	    	min-height: 186px;
-
 	    	position: relative;
-	    	top: -166px;
+	    	/*top: -166px;*/
     	}	
+
+    	.owl-theme .owl-controls {
+    		display: none;
+    	}
     }
 }
 

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
 <head>
     {{> meta_head}}
     <link href="/stylesheets/main.css" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="/javascripts/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/javascripts/owl-carousel/owl.theme.css" rel="stylesheet">
     
 </head>
 <body>
@@ -10,13 +13,15 @@
         {{> head}}
 
         <div class="pure-u-5-8 content">
-            {{> scrollpic_h}}
+            
+            {{> owl_yui}}
         </div>
 
         {{> footer}} 
     </div>
-</body>
-<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+
+<script src="http://yui.yahooapis.com/3.15.0/build/yui/yui-min.js"></script>
+<script src="/javascripts/owl-carousel/owl.carousel_yui.js"></script>
 <style>
 /* handle javascript ON case */
 html.yui3-js-enabled .photo{display:none;}
@@ -26,11 +31,12 @@ html.yui3-js-enabled {
     height:100%;
 }
 html.yui3-js-enabled .content {
-    background:#fff url(/data/ajax-loader.gif) 50% 50% no-repeat;
-    
+    /*background:#fff url(/data/ajax-loader.gif) 50% 50% no-repeat;*/
 }
 </style>
 
 <script src="/javascripts/omen.js"></script>
 {{> fastclick}}
+
+</body>
 </html>

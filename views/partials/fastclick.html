@@ -6,14 +6,26 @@
 
 YUI().use('node', 'event', function(Y) {
 	var menuClick = Y.one('.menuClick'),
-		menu = Y.one('.menu ul');
-console.log(menuClick);
+		menu = Y.one('.menu ul'),
+		member = Y.one('.member'),
+		works = Y.one('.works');
+
 	if (menuClick) {
 		Y.delegate("click", function (e) {
-			console.log('cold');
+			
 			e.preventDefault();
-
 			menu.toggleClass('on');
+			console.log(works);
+			if (member) {
+				console.log('member');
+				member.toggleClass('on');
+			}
+
+			if (works) {
+				console.log('works');
+				works.toggleClass('on');
+			}
+			
 
 
 		}, ".menu", ".menuClick");

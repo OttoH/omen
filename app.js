@@ -13,7 +13,8 @@ var express = require('express'),
     fs = require('fs');
 
 var app = express();
-    commonEngine = require("./commonRes/common");
+    commonEngine = require("./commonRes/common"),
+    isMobile = require("./commonRes/isMobile");
     //flickrAPI= require('flickrnode').FlickrAPI;
     /*
     var flickr= new flickrAPI("002faabf8b3f84b1fd0b602cbf0cb9c2");
@@ -56,6 +57,11 @@ fs.readdir("./public/data/work/dryluffa", function(err, files) {
 */
 //app.get('/test', routes.index);
 
+
+/**
+* start to route
+*
+*/
 app.get('/old', function (req, res) {
 
   var data = {};
@@ -84,6 +90,7 @@ app.get('/', function (req, res) {
   var d = {};
 
   d.cover = commonEngine.getCover();
+  d.isMobile = isMobile.isCallerMobile(req);
   res.render('index_', d);
 });
 
@@ -98,5 +105,5 @@ app.get('/work/:title', works.s_work);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
-  console.log(app.routes);
+  //console.log(app.routes);
 });

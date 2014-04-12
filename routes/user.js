@@ -3,8 +3,10 @@
  * GET users listing.
  */
 
-var commonEngine = require("../commonRes/common");
+var commonEngine = require("../commonRes/common"),
+	isMobile = require("../commonRes/isMobile");
 
 exports.list = function(req, res){
-  res.send("respond with a resource");
+	//data.isMobile = isMobile.isCallerMobile(req);
+  	res.send("respond with a resource");
 };

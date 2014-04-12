@@ -60,7 +60,35 @@
 		.man {
 			display: block;
 			height: 230px;
-			border-top: 1px dotted @c_purple_0;
+			/*border-top: 1px dotted @c_purple_0;*/
+
+			.photo {
+				display: block;
+				width: 100%;
+				height: 180px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: 1px solid @c_gray_d5;
+			}
+
+			.desc {
+				display: block;
+				line-height: 18px;
+				margin: 6px 0 0 0;
+
+				.largeF {
+					font-size: @font-ss;
+				}
+
+				.middleF {
+					font-size: @font-ss;
+				}
+
+				.smallF {
+					font-size: @font-ss;
+				}
+			}
 		}
 	}
 }
@@ -68,6 +96,10 @@
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
 	.member {
 		position: relative;
-		top: -166px;
+		/*top: -166px;*/
+
+		&.on {
+			top: 0px;
+		}
 	}
 }
